@@ -3,19 +3,20 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 using YourAppNamespace;
+using ProductsNamespace;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//DB conection
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<YourDbContext>(options =>
+builder.Services.AddDbContext<ProductsDbContext>(options =>
     options.UseNpgsql(connectionString));
 
 builder.Services.AddAuthorization();
 
 builder.Services.AddControllers();
 
-var key = "";//Todo add key to github
+var key = "";//TODO ADD KEY TO ENCODE TOKEN
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

@@ -141,3 +141,14 @@ C:\Users\Minosso\Documents\projetos\API-Dotnet\dotnet_API\bin\Debug\net8.0\tr\Mi
 C:\Users\Minosso\Documents\projetos\API-Dotnet\dotnet_API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Minosso\Documents\projetos\API-Dotnet\dotnet_API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Minosso\Documents\projetos\API-Dotnet\dotnet_API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.csproj.AssemblyReference.cache
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.AssemblyInfoInputs.cache
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.AssemblyInfo.cs
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.csproj.CoreCompileInputs.cache
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.sourcelink.json
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.dll
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\refint\dotnet_API.dll
+C:\Users\Joao Volpato\Source\Repos\Products-Project\obj\Debug\net8.0\dotnet_API.pdb

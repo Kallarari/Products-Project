@@ -1,24 +1,29 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using dotnet_API.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace YourAppNamespace
+namespace ProductsNamespace
 {
-    public class YourDbContext : DbContext
+    public class ProductsDbContext : DbContext
     {
-        public YourDbContext(DbContextOptions<YourDbContext> options) : base(options) { }
+        public ProductsDbContext(DbContextOptions<ProductsDbContext> options) : base(options) { }
 
-        // Defina suas tabelas
-        public DbSet<YourEntity> YourEntities { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            // Configurações adicionais, se necessário
-        }
-    }
 
-    public class YourEntity
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Supplier)
+                .WithMany(s => s.Products)
+                .HasForeignKey(p => p.SupplierId);
+
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId);
+        }
     }
 }

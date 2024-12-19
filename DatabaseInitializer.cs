@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using dotnet_API.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using ProductsNamespace;
 using System;
 
 namespace YourAppNamespace
@@ -9,13 +11,13 @@ namespace YourAppNamespace
         public static void InitializeDatabase(IServiceProvider serviceProvider)
         {
             using var scope = serviceProvider.CreateScope();
-            var dbContext = scope.ServiceProvider.GetRequiredService<YourDbContext>();
+            var dbContext = scope.ServiceProvider.GetRequiredService<ProductsDbContext>();
 
             // Verifica ou cria o banco de dados
             if (dbContext.Database.EnsureCreated())
             {
                 Console.WriteLine("Banco de dados criado.");
-                SeedData(dbContext); // Popula os dados iniciais
+                SeedData(dbContext);
             }
             else
             {
@@ -23,14 +25,14 @@ namespace YourAppNamespace
             }
         }
 
-        private static void SeedData(YourDbContext context)
+        private static void SeedData(ProductsDbContext context)
         {
-            // Adicione dados iniciais
-            if (!context.YourEntities.Any())
+            if (!context.Products.Any())
             {
-                context.YourEntities.Add(new YourEntity { Name = "Exemplo" });
+                context.Products.Add(new Product { Name = "Exemplo de produto", CategoryId=1, IsDeleted=false,Category="teste category", Supplier="supplier test", SupplierId=1 });
                 context.SaveChanges();
             }
+            //TODO POPULATE CATEGORY AND SUPPLIER
         }
     }
 }
